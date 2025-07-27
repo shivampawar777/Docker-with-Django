@@ -5,8 +5,8 @@ FROM python:3.13-slim AS builder
 WORKDIR /app
 
 # Set environment variables to optimize python
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 # Upgrade pip
 RUN pip install --upgrade pip 
