@@ -1,0 +1,12 @@
+services:
+  django:
+    restart: on-failure
+    build: ./django
+    hostname: django
+
+  nginx:
+    build: ./nginx
+    ports:
+      - '80:80'
+    depends_on:
+      - django
